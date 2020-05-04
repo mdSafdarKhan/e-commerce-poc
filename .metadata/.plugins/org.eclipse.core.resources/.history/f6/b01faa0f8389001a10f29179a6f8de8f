@@ -1,0 +1,25 @@
+package com.example.demo.product;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ProductController {
+
+	@Autowired ProductRepository productRepository;
+	
+	@GetMapping("/products/recommendations")
+	public Object getProductRecommendation() {
+		return productRepository.findAll();
+	}
+	
+	@GetMapping("/product/{id}")
+	public Product getProduct(@PathVariable(name = "id") String id) {
+		Optional<Product> product = productRepository.findById(id);
+		return ;
+	}
+}

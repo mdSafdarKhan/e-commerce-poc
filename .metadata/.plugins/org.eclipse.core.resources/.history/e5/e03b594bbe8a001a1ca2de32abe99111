@@ -1,0 +1,7 @@
+package com.example.demo.cart;
+
+import java.io.Serializable;
+
+public class CartItem implements Serializable{
+
+}

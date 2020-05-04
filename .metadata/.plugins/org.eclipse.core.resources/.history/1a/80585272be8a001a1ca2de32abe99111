@@ -1,0 +1,16 @@
+package com.example.demo.cart;
+
+import java.io.Serializable;
+import java.util.List;
+
+public class Cart implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String id;
+	private List<CartItem> cartItems;
+	private float price;
+	private String currency;
+}

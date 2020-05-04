@@ -1,0 +1,11 @@
+package com.example.demo.cart;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@FeignClient(name = "cart-service")
+public interface CartService {
+	
+	@RequestMapping(method = R)
+
+}

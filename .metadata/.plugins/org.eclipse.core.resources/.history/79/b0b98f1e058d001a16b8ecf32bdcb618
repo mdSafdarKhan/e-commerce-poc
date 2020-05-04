@@ -1,0 +1,7 @@
+function myFunction(){
+	alert("Button Pressed");
+}
+function getProducts(){
+	let request = new XMLHttpRequest();
+	
+}

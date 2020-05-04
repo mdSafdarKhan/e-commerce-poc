@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+/home/msk/Desktop/elearning.poc/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2767714402.index
+785374290.index
+755390439.index
+630271427.index
+3531736386.index

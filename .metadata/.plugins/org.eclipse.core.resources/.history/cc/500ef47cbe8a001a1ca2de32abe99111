@@ -1,0 +1,12 @@
+package com.example.demo.user;
+
+import java.util.List;
+
+import com.example.demo.cart.Cart;
+
+public class User {
+
+	private String userName;
+	private List<Cart> cartList;
+	
+}

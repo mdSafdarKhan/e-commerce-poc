@@ -1,0 +1,12 @@
+package com.example.demo.cart;
+
+import java.io.Serializable;
+import java.util.List;
+
+public class Cart implements Serializable{
+
+	private String id;
+	private List<CartItem> items;
+	private float total;
+	private String currency;
+}

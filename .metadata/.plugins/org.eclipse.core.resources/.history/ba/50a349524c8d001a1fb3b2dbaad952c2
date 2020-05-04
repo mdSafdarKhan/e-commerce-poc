@@ -1,0 +1,7 @@
+function myFunction(){
+	alert("Button Pressed");
+}
+function getProducts(){
+	var request = new XMLHttpRequest();
+	request.open("GET", "http://localhost:9001/products/recommendations", true);
+}

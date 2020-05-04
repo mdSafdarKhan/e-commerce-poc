@@ -1,0 +1,11 @@
+package com.example.demo.cart;
+
+import java.io.Serializable;
+
+public class CartItem implements Serializable{
+
+	private String id;
+	private String name;
+	private float price;
+	private String currency;
+}
