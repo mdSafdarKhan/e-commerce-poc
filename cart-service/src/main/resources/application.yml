@@ -1,6 +1,9 @@
 spring:
   application:
     name: cart-service
+  cache:
+    redis:
+      key-prefix: false
 server:
   port: 9002
 eureka:

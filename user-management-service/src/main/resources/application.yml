@@ -1,9 +1,18 @@
 spring:
   application:
     name: user-management-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/myusers
+    username: root
+    password: jiyodigital
+  jpa:
+    hibernate:
+      ddl-auto: update
+    
 server:
   port: 9003
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+  

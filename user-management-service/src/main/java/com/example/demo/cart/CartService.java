@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @FeignClient(name = "cart-service")
 public interface CartService {
 	
-	@GetMapping("/cart/261dce78-ee1d-45eb-90c1-b6d133545839")
+	@GetMapping("/cart/1588695183498")
 	public Cart getCart();
 
 }

@@ -9,7 +9,7 @@ public class Cart implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String id;
+	private String cartId;
 	private List<CartItem> cartItems;
 	private float price;
 	private String currency;
@@ -18,13 +18,15 @@ public class Cart implements Serializable{
 		super();
 	}
 
-	public String getId() {
-		return id;
+	public String getCartId() {
+		return cartId;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setCartId(String cartId) {
+		this.cartId = cartId;
 	}
+
+
 
 	public List<CartItem> getCartItems() {
 		return cartItems;

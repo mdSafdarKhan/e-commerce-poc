@@ -3,7 +3,6 @@ package com.example.demo.cart;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -19,13 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/cart")
 public class CartController {
 
-	@Autowired RedisTemplate<String, Cart> redisTemplate;
+	//@Autowired RedisTemplate<String, Cart> redisTemplate;
 	
-	@LoadBalanced
+	@Autowired CartRepository cartRepository;
+	
 	@GetMapping("/{id}")
 	public Cart getCart(@PathVariable(name = "id") String id) {
-		System.out.println("id:   " + id);
-		return redisTemplate.opsForValue().get(id);
+		System.out.println("id: " + id + " ---> " + new Date().toString());
+		return cartRepository.findById(id).get();
 	}
 	
 	@PostMapping
@@ -46,7 +46,7 @@ public class CartController {
 			cItems.add(cItem);
 		}
 		c.setCartItems(cItems);
-		redisTemplate.opsForValue().set(cartId, cart);
+		c = cartRepository.save(c);
 		return c;
 	}
 	

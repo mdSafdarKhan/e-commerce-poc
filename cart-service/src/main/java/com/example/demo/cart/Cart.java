@@ -3,6 +3,10 @@ package com.example.demo.cart;
 import java.io.Serializable;
 import java.util.List;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.redis.core.RedisHash;
+
+@RedisHash("Cart")
 public class Cart implements Serializable{
 
 	/**
@@ -10,6 +14,7 @@ public class Cart implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	@Id
 	private String cartId;
 	private List<CartItem> cartItems;
 	private float total;

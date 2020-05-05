@@ -11,3 +11,6 @@ zuul:
     cart:
       path: /api/** 
       url: http://localhost:9002/
+    user:
+      path: /api/**
+      url: http://localhost:9003/
